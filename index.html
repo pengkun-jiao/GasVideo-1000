@@ -8,17 +8,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Spatiotemporal Sycophancy in Vid-LLMs</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
+  
+  <style>
+    .fa-hugging-face {
+      background: -webkit-linear-gradient(45deg, #FFD700, #FF69B4, #87CEEB);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
 <body>
 
@@ -29,19 +37,12 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Spatiotemporal Sycophancy: Negation-Based Gaslighting in Video Large Language Models</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              Ziyao Tang<sup>1,2</sup>,</span>
-            <span class="author-block">
-              Pengkun Jiao<sup>1,2</sup>,</span>
-            <span class="author-block">
-              Bin Zhu<sup>3</sup>,</span>
-            <span class="author-block">
-              Huiyan Qi<sup>4</sup>,</span>
-            <span class="author-block">
-              Jingjing Chen<sup>1,2</sup>,</span>
-            <span class="author-block">
-              Yu-Gang Jiang<sup>1,2</sup>
-            </span>
+            <span class="author-block"><a href="#">Ziyao Tang</a><sup>1,2</sup>,</span>
+            <span class="author-block"><a href="#">Pengkun Jiao</a><sup>1,2</sup>,</span>
+            <span class="author-block"><a href="#">Bin Zhu</a><sup>3</sup>,</span>
+            <span class="author-block"><a href="#">Huiyan Qi</a><sup>4</sup>,</span>
+            <span class="author-block"><a href="#">Jingjing Chen</a><sup>1,2</sup>,</span>
+            <span class="author-block"><a href="#">Yu-Gang Jiang</a><sup>1,2</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -64,6 +65,14 @@
                   <span>arXiv</span>
                 </a>
               </span>
+              
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/kk12ff/GasVideo1000" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fa-brands fa-hugging-face"></i></span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+              
             </div>
           </div>
         </div>
@@ -79,31 +88,56 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Video Large Language Models (Vid-LLMs) have demonstrated remarkable performance in video understanding tasks, yet their robustness under conversational interaction remains largely underexplored[cite: 9]. In this paper, we identify <b>spatiotemporal sycophancy</b>, a failure mode in which Vid-LLMs retract initially correct, visually grounded judgments and conform to misleading user feedback under negation-based gaslighting[cite: 10].
+            Video Large Language Models (Vid-LLMs) have demonstrated remarkable performance in video understanding tasks, yet their robustness under conversational interaction remains largely underexplored. In this paper, we identify <b>spatiotemporal sycophancy</b>, a failure mode in which Vid-LLMs retract initially correct, visually grounded judgments and conform to misleading user feedback under negation-based gaslighting.
           </p>
           <p>
-            To systematically investigate this phenomenon, we propose a negation-based gaslighting evaluation framework and introduce <b>Gas Video-1000</b>, a curated benchmark designed to probe spatiotemporal sycophancy with clear visual grounding and temporal reasoning requirements[cite: 12]. Extensive experiments reveal that vulnerability to negation-based gaslighting is pervasive and severe, even among models with strong baseline performance[cite: 14].
+            To systematically investigate this phenomenon, we propose a negation-based gaslighting evaluation framework and introduce <b>Gas Video-1000</b>, a curated benchmark designed to probe spatiotemporal sycophancy with clear visual grounding and temporal reasoning requirements. Extensive experiments reveal that vulnerability to negation-based gaslighting is pervasive and severe, even among models with strong baseline performance.
           </p>
         </div>
       </div>
     </div>
 
-    <figure>
-      <img src="static/images/framework.jpg" alt="Framework" style="max-width: 100%;">
-    </figure>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <figure class="image">
+          <img src="static/images/framework.jpg" alt="Evaluation Framework Overview">
+          <p class="has-text-centered is-size-7 mt-2">Figure 1: Overview of the Spatiotemporal Sycophancy Evaluation Framework.</p>
+        </figure>
+      </div>
+    </div>
 
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Negation-Based Gaslighting</h2>
         <div class="content has-text-justified">
           <p>
-            We evaluate Vid-LLMs under three distinct modalities of deceptive pressure to simulate real-world social pressures and evaluate the robust groundedness of VLLMs against deceptive human feedback[cite: 150]:
+            We evaluate Vid-LLMs under three distinct modalities of deceptive pressure to simulate real-world social pressures and evaluate the robust groundedness of Vid-LLMs against deceptive human feedback:
           </p>
           <ul>
-            <li><b>Direct Denial:</b> This approach explicitly rejects the model's prediction by flatly asserting a false alternative premise, challenging the model to align with an objectively incorrect statement[cite: 148].</li>
-            <li><b>Authority Appeal:</b> This strategy invokes a simulated authoritative persona (e.g., an expert or a supervisor) to dismiss the model's reasoning as incorrect or amateurish, leveraging perceived hierarchy to induce doubt[cite: 147].</li>
-            <li><b>Emotional Pressure:</b> The prompts utilize charged linguistic cues conveying frustration or stern disappointment to undermine the model's confidence and pressure it into conforming to the user's erroneous narrative[cite: 149].</li>
+            <li><b>Direct Denial:</b> This approach explicitly rejects the model's prediction by flatly asserting a false alternative premise, challenging the model to align with an objectively incorrect statement.</li>
+            <li><b>Authority Appeal:</b> This strategy invokes a simulated authoritative persona (e.g., an expert or a supervisor) to dismiss the model's reasoning as incorrect or amateurish, leveraging perceived hierarchy to induce doubt.</li>
+            <li><b>Emotional Pressure:</b> The prompts utilize charged linguistic cues conveying frustration or stern disappointment to undermine the model's confidence and pressure it into conforming to the user's erroneous narrative.</li>
           </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Dataset Statistics</h2>
+        <div class="columns is-vcentered">
+          <div class="column">
+            <figure class="image">
+              <img src="static/images/class_distribution.png" alt="Class distribution of GasVideo-1000">
+              <p class="has-text-centered is-size-7 mt-1">Class distribution of GasVideo-1000.</p>
+            </figure>
+          </div>
+          <div class="column">
+            <figure class="image">
+              <img src="static/images/static_detail.png" alt="Detailed statistics of GasVideo-1000">
+              <p class="has-text-centered is-size-7 mt-1">Detailed statistics of GasVideo-1000 sources.</p>
+            </figure>
+          </div>
         </div>
       </div>
     </div>
@@ -113,9 +147,9 @@
         <h2 class="title is-3">Key Findings</h2>
         <div class="content has-text-justified">
           <ul>
-            <li><b>Rationalized Hallucinations:</b> Rather than merely changing their answers, the models often fabricate unsupported temporal or spatial explanations to justify incorrect revisions[cite: 11]. This demonstrates that models actively leverage their generative capacity to construct a coherent, albeit false, reality[cite: 295].</li>
-            <li><b>Pervasiveness of Sycophancy:</b> Even the most powerful proprietary model, Gemini-3-Pro, suffers a catastrophic performance degradation under gaslighting, while open-source models like Qwen3-VL exhibit staggering drops[cite: 210, 211].</li>
-            <li><b>Preemptive Prompt Hardening:</b> While prompt-level grounding constraints can partially mitigate this behavior, they do not reliably prevent hallucinated justifications or belief reversal[cite: 15]. Gemini-3-Pro exhibits exceptional sensitivity, with its SR dropping sharply from 54.80% to 8.67%[cite: 216]. In contrast, Qwen3-VL demonstrates a more modest reduction (71.89% to 64.0%), while other open-source models show varying degrees of improvement[cite: 217].</li>
+            <li><b>Rationalized Hallucinations:</b> Rather than merely changing their answers, models often fabricate unsupported temporal or spatial explanations to justify incorrect revisions. This demonstrates that models actively leverage their generative capacity to construct a coherent, albeit false, reality.</li>
+            <li><b>Pervasiveness of Sycophancy:</b> Even powerful proprietary models like Gemini-3-Pro suffer significant performance degradation under gaslighting, while open-source models like Qwen3-VL exhibit staggering drops.</li>
+            <li><b>Preemptive Prompt Hardening:</b> While prompt-level grounding constraints can partially mitigate this behavior, they do not reliably prevent hallucinated justifications. Gemini-3-Pro exhibits exceptional sensitivity to hardening, with its Sycophancy Rate dropping sharply from 54.80% to 8.67%, whereas Qwen3-VL shows a more modest reduction.</li>
           </ul>
         </div>
       </div>
@@ -138,7 +172,9 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <p>Research conducted by Institute of Trustworthy Embodied AI, Fudan University and Singapore Management University[cite: 4, 5].</p>
+      <p>
+        Research conducted by the <strong>Institute of Trustworthy Embodied AI</strong>, Fudan University and Singapore Management University.
+      </p>
     </div>
   </div>
 </footer>
