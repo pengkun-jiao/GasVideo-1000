@@ -2,9 +2,9 @@
 
 # Gas Video-1000 Dataset
 
-**Gas Video-1000** is a curated benchmark dataset introduced by researchers from Fudan University (Institute of Trustworthy Embodied AI, Shanghai Key Laboratory of Multimodal Embodied AI) and Singapore Management University. he dataset is designed to systematically investigate and probe the vulnerability of Video Large Language Models (Vid-LLMs) to a phenomenon known as "spatiotemporal sycophancy" during conversational interactions.
+**Gas Video-1000** is a curated benchmark designed to systematically probe "spatiotemporal sycophancy" in Video Large Language Models (Vid-LLMs) under adversarial conversational pressure.
 
-![Gas Video-1000 框架图](./static/images/framework.jpg)
+![Gas Video-1000 Framework](./static/images/framework.jpg)
 
 ## Core Phenomenon: Spatiotemporal Sycophancy
 This benchmark specifically evaluates a critical failure mode in Vid-LLMs:
