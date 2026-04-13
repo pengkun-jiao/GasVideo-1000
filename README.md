@@ -4,6 +4,8 @@
 
 **Gas Video-1000** is a curated benchmark designed to systematically probe "spatiotemporal sycophancy" in Video Large Language Models (Vid-LLMs) under adversarial conversational pressure.
 
+[<img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face Logo" width="18" style="vertical-align: middle; margin-right: 4px;"> Dataset](https://huggingface.co/datasets/kk12ff/GasVideo1000)
+
 ![Gas Video-1000 Framework](./static/images/framework.jpg)
 
 ## Core Phenomenon: Spatiotemporal Sycophancy
