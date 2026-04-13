@@ -21,7 +21,7 @@ Gas Video-1000 consists of **1,013 high-quality samples**. The construction of t
 **Balanced Complexity**: The dataset maintains a mix of simple recognition and complex reasoning to determine if model fragility correlates with task difficulty.
 
 ## Data Sources
-The samples in Gas Video-1000 are drawn from several prominent general video comprehension and fine-grained reasoning benchmarks[cite: 157]:
+The samples in Gas Video-1000 are drawn from several prominent general video comprehension and fine-grained reasoning benchmarks:
 * **MSRVTT-QA**: 300 samples
 * **PerceptionTest**: 293 samples 
 * **ActivityNet-QA**: 200 samples 
