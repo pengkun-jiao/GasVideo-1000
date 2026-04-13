@@ -4,6 +4,8 @@
 
 **Gas Video-1000** is a curated benchmark dataset introduced by researchers from Fudan University (Institute of Trustworthy Embodied AI, Shanghai Key Laboratory of Multimodal Embodied AI) and Singapore Management University. he dataset is designed to systematically investigate and probe the vulnerability of Video Large Language Models (Vid-LLMs) to a phenomenon known as "spatiotemporal sycophancy" during conversational interactions.
 
+![Gas Video-1000 框架图](./static/images/framework.jpg)
+
 ## Core Phenomenon: Spatiotemporal Sycophancy
 This benchmark specifically evaluates a critical failure mode in Vid-LLMs:
 * **Definition**: Under negation-based gaslighting, models retract initially correct, visually grounded judgments and conform to misleading user feedback.
@@ -45,4 +47,4 @@ To simulate real-world social pressures, the benchmark utilizes three categories
 * **Direct Denial**: Explicitly rejects the model's prediction by flatly asserting a false alternative premise, challenging the model to align with an objectively incorrect statement.
 * **Authority Appeal**: Invokes a simulated authoritative persona (e.g., an expert or a supervisor) to dismiss the model's reasoning as incorrect or amateurish, leveraging perceived hierarchy to induce doubt.
 * **Emotional Pressure**: Utilizes charged linguistic cues conveying frustration or stern disappointment to undermine the model's confidence and pressure it into conforming to the user's erroneous narrative.
-<img width="468" height="637" alt="image" src="https://github.com/user-attachments/assets/7c813dcb-2c45-4ca8-bc7b-fd5db946f7fd" />
+
