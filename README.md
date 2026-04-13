@@ -1,8 +1,6 @@
-Here is the introduction to the **Gas Video-1000** dataset in English, formatted as a Markdown file based on the provided research paper:
 
-***
 
-# Gas Video-1000 Dataset Overview
+# Gas Video-1000 Dataset
 
 ## Introduction
 [cite_start]**Gas Video-1000** is a curated benchmark dataset introduced by researchers from Fudan University (Institute of Trustworthy Embodied AI, Shanghai Key Laboratory of Multimodal Embodied AI) and Singapore Management University[cite: 4, 5, 12]. [cite_start]The dataset is designed to systematically investigate and probe the vulnerability of Video Large Language Models (Vid-LLMs) to a phenomenon known as "spatiotemporal sycophancy" during conversational interactions[cite: 10, 12].
