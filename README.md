@@ -14,9 +14,7 @@ This benchmark specifically evaluates a critical failure mode in Vid-LLMs:
 * **Definition**: Under negation-based gaslighting, models retract initially correct, visually grounded judgments and conform to misleading user feedback.
 * **Rationalized Hallucination**: Rather than merely changing their answers, the models frequently generate fabricated temporal or spatial explanations to justify their incorrect revisions. 
 
-![Temporal Sycophancy](./static/images/example1.jpg)
-
-![Spatial Sycophancy](./static/images/example2.jpg)
+![Temporal Sycophancy](./static/images/example1.jpg) ![Spatial Sycophancy](./static/images/example2.jpg)
 
 ## Dataset Construction Principles & Scale
 Gas Video-1000 consists of **1,013 high-quality samples**. The construction of the dataset adheres strictly to three core principles:
