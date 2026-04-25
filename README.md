@@ -2,7 +2,8 @@
 
 # Gas Video-1000 Dataset
 
-ACL 2026 Findings
+**[News]**
+📢 Accepted by ACL 2026 Findings
 
 **Gas Video-1000** is a curated benchmark designed to systematically probe "spatiotemporal sycophancy" in Video Large Language Models (Vid-LLMs) under adversarial conversational pressure.
 
